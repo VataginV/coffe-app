@@ -23,6 +23,7 @@ public class Cafe {
     private String address;
     private String phone;
 
+    @Builder.Default
     @Column(name = "is_active", nullable = false)
     private Boolean isActive = true;
 

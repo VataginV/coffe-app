@@ -22,6 +22,7 @@ public class MenuCategory {
     @Column(nullable = false)
     private String name;
 
+    @Builder.Default
     @Column(name = "sort_order")
     private Integer sortOrder = 0;
 }

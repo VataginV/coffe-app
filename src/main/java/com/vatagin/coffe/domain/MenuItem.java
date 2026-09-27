@@ -32,6 +32,7 @@ public class MenuItem {
     @Column(name = "photo_url")
     private String photoUrl;
 
+    @Builder.Default
     @Column(name = "is_available", nullable = false)
     private Boolean isAvailable = true;
 }
