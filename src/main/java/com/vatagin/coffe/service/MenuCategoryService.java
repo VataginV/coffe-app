@@ -56,4 +56,10 @@ public class MenuCategoryService {
         return categoryRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Category not found: " + id));
     }
+
+//    public List<MenuCategoryResponse> getAllByCafe(Long cafeId) {
+//        return categoryRepository.findAllByCafeIdOrderBySortOrderAsc(cafeId).stream()
+//                .map(categoryMapper::toResponse)
+//                .toList();
+//    }
 }

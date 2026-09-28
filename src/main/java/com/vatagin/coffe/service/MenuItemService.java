@@ -3,6 +3,7 @@ package com.vatagin.coffe.service;
 import com.vatagin.coffe.domain.MenuCategory;
 import com.vatagin.coffe.domain.MenuItem;
 import com.vatagin.coffe.dto.request.CreateMenuItemRequest;
+import com.vatagin.coffe.dto.response.MenuCategoryResponse;
 import com.vatagin.coffe.dto.response.MenuItemResponse;
 import com.vatagin.coffe.exception.NotFoundException;
 import com.vatagin.coffe.mapper.MenuItemMapper;
@@ -59,4 +60,10 @@ public class MenuItemService {
         return menuItemRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Menu item not found: " + id));
     }
+
+//    public List<MenuCategoryResponse> getAllByCafe(Long cafeId) {
+//        return categoryRepository.findAllByCafeIdOrderBySortOrderAsc(cafeId).stream()
+//                .map(categoryMapper::toResponse)
+//                .toList();
+//    }
 }
